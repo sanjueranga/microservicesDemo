@@ -28,7 +28,7 @@ public class UserController {
 
     @PostMapping("/user")
     public User saveUser(@RequestBody User user) {
-        logger.debug("Saving user");
+        logger.debug("Saving Sser");
         return userService.saveUser(user);
     }
 
@@ -40,13 +40,13 @@ public class UserController {
 
 
 
-    @PutMapping("/user/{id}")
+    @PutMapping("/update/{id}")
     public User updateUser(@PathVariable("id") Long id, @RequestBody User user) {
         logger.debug("Updating user");
         return userService.updateUserById(id, user);
     }
 
-    @DeleteMapping("/user/{id}")
+    @DeleteMapping("/delete/{id}")
     public String deleteUser(@PathVariable("id") Long id) {
         logger.debug("Deleting user");
         return userService.deleteUserById(id);
